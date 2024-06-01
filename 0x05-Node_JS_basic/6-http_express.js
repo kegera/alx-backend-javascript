@@ -1,14 +1,14 @@
 const express = require('express');
 
 const app = express();
-const port = 1245;
+const PORT = 1245;
 
-app.get('/', (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
+app.get('/', (_, res) => {
   res.send('Hello Holberton School!');
 });
 
-app.listen(port);
+app.listen(PORT, () => {
+  console.log(`Server listening on PORT ${PORT}`);
+});
 
 module.exports = app;
